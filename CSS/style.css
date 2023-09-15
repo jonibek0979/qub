@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: perspective(400px);
+    margin-top: 300px;
+    animation: wrapperan 2s infinite linear;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    position: absolute;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+
+}
+.wrapper:hover .box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    position: absolute;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+background: white;
+}
+
+
+
+@keyframes wrapperan {
+    100% {
+        transform: perspective(400px) rotateY(360deg) rotateX(360deg);
+    }
+}
+
+/* @keyframes wrapperan {
+    100% {
+        transform: perspective(400px) rotateY(360deg) rotateX(360deg);
+    }
+} */
+
+.box:nth-child(1) {
+    transform: translate3d(0, 0, 150px);
+    background: blue;
+}
+
+.box:nth-child(2) {
+    background: red;
+    transform: translate3d(0, 0, -150px);
+}
+
+.box:nth-child(3) {
+    background: purple;
+    transform: rotateY(90deg) translate3d(0, 0, 150px);
+}
+
+.box:nth-child(4) {
+    transform: rotateY(-90deg) translate3d(0, 0, 150px);
+    background: black;
+}
+
+.box:nth-child(5) {
+    transform: rotateX(90deg) translate3d(0, 0, 150px);
+    background: yellow;
+}
+
+.box:nth-child(6) {
+    transform: rotateX(-90deg) translate3d(0, 0, 150px);
+    background: white;
+
+}
